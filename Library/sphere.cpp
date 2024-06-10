@@ -1,35 +1,48 @@
-#include "sphere.h"
+﻿#define _USE_MATH_DEFINES
 #include <cmath>
-#define _USE_MATH_DEFINES
 #include <sstream>
+#include "sphere.h"
 
-#ifndef M_PI
-#define M_PI 	3.14159265358979323846
-#endif
 
 Sphere::Sphere(const Point center, const int radius) {
-    if (radius <= 0) throw;
+    if (radius <= 0) throw std::invalid_argument("Неверно введет радиус");
     this->center = center;
-    this->radius = (size_t)radius;
+    this->radius = (double)radius;
 }
 
+/**
+* @brief Считает объем сферы
+* @param radius - радиус сферы
+* @return Возвращает радиус сферы
+*/
 double Sphere::getVolume() {
-    return (4/3) * M_PI * (double)this->radius * (double)this->radius * (double)this->radius;
+    return (4.0/3.0) * M_PI * radius * radius * radius;
 }
+
+/**
+* @brief Считает площадь поверхности сферы
+* @param radius - радиус сферы
+* @return Возвращает площадь поверхности сферы
+*/
 double Sphere::getSurfaceArea() {
-    return 4 * M_PI * (double)this->radius * (double)this->radius;
+    return 4 * M_PI * radius * radius;
 }
+
+/**
+* @brief Переводит данные в строковый формат
+* @return Возвращает данные в строковом формате
+*/
 std::string Sphere::toString() const {
     std::stringstream ss;
     ss << "center: " << this->center << "radius: " << (int)this->radius << std::endl;
     return ss.str();
 }
 
-const Point &Sphere::getCenter() {
+const Point Sphere::getCenter() {
     return center;
 }
 const int Sphere::getRadius() {
-    return (int)radius;
+    return (double)radius;
 }
 void Sphere::setCenter(const Point center) {
     this->center = center;

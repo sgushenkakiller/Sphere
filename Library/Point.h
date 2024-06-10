@@ -3,20 +3,16 @@
 #include <istream>
 #include <ostream>
 
-class Point {
+struct Point {
     int x;
     int y;
     int z;
-public:
     Point(const int x, const int y, const int z);
     Point();
     std::string toString() const;
     int getX();
     int getY();
     int getZ();
-    void setX(const int x);
-    void setY(const int y);
-    void setZ(const int z);
     friend std::ostream &operator<<(std::ostream &os, const Point &point) {
         os << point.toString();
         return os;

@@ -6,13 +6,13 @@
 
 class Sphere {
     Point center;
-    size_t radius;
+    double radius;
 public:
     Sphere(const Point center, const int radius);
     double getVolume();
     double getSurfaceArea();
     std::string toString() const;
-    const Point &getCenter();
+    const Point getCenter(); const;
     const int getRadius();
     void setCenter(const Point center);
     void setRadius(const int radius);
@@ -21,9 +21,9 @@ public:
         return os;
     }
     friend std::istream &operator>>(std::istream &is, Sphere &sphere) {
-        Point center(0, 0, 0);
-        int radius = 0;
-        is >> center >> radius;
+        Sphere temp{ center, radius };
+        sphere = temp;
+        return is;
         if (radius <= 0) throw;
         sphere.center = center;
         sphere.radius = (size_t)radius;
