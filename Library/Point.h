@@ -4,15 +4,9 @@
 #include <ostream>
 
 struct Point {
-    int x;
-    int y;
-    int z;
-    Point(const int x, const int y, const int z);
-    Point();
-    std::string toString() const;
-    int getX();
-    int getY();
-    int getZ();
+    double x;
+    double y;
+    double z;
     friend std::ostream &operator<<(std::ostream &os, const Point &point) {
         os << point.toString();
         return os;
