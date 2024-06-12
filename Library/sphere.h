@@ -13,7 +13,7 @@ public:
     double getSurfaceArea();
     std::string toString() const;
     const Point getCenter(); const;
-    const int getRadius();
+    double getRadius(); const
     void setCenter(const Point center);
     void setRadius(const double radius);
     friend std::ostream &operator<<(std::ostream &os, const Sphere &sphere) {
