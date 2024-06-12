@@ -42,7 +42,7 @@ const Point Sphere::getCenter() {
     return center;
 }
 const int Sphere::getRadius() {
-    return (double)radius;
+    return radius;
 }
 void Sphere::setCenter(const Point center) {
     this->center = center;
