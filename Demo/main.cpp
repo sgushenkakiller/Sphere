@@ -5,20 +5,20 @@
 int main() {
     setlocale(LC_ALL, "ru");
     int x = 0, y = 0, z = 0;
-    std::cout << "Ââåäèòå êîîðäèíàòû (x, y, z) öåíòðà ñôåðû: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ (x, y, z) Ñ†ÐµÐ½Ñ‚Ñ€Ð° ÑÑ„ÐµÑ€Ñ‹: ";
     std::cin >> x >> y >> z;
     Point pt(x, y, z);
-    std::cout << "Ââåäèòå ðàäèóñ ñôåðû: ";
-    int radius = 0;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð´Ð¸ÑƒÑ ÑÑ„ÐµÑ€Ñ‹: ";
+    double radius = 0;
     std::cin >> radius;
     Sphere sph(pt, 3);
-    std::cout << "Ñôåðà: ";
+    std::cout << "Ã‘Ã´Ã¥Ã°Ã : ";
     std::cout << sph << std::endl;
-    std::cout << "Ââåäèòå êîîðäèíàòû öåíòðà è ðàäèóñ ñôåðû: ";
+    std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã» Ã¶Ã¥Ã­Ã²Ã°Ã  Ã¨ Ã°Ã Ã¤Ã¨Ã³Ã± Ã±Ã´Ã¥Ã°Ã»: ";
     std::cin >> sph;
-    std::cout << "Îáú¸ì: ";
+    std::cout << "ÃŽÃ¡ÃºÂ¸Ã¬: ";
     std::cout << sph.getVolume() << std::endl;
-    std::cout << "Ïëîùàäü ïîâåðõíîñòè: ";
+    std::cout << "ÃÃ«Ã®Ã¹Ã Ã¤Ã¼ Ã¯Ã®Ã¢Ã¥Ã°ÃµÃ­Ã®Ã±Ã²Ã¨: ";
     std::cout << sph.getSurfaceArea() << std::endl;
     return 0;
 }
