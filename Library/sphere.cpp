@@ -5,7 +5,7 @@
 
 
 Sphere::Sphere(const Point center, const double radius) {
-    if (radius <= 0) throw std::invalid_argument("Неверно введет радиус");
+    if (this->setRadius(radius) <= 0) throw std::invalid_argument("Неверно введет радиус");
     this->center = center;
     this->radius = radius;
 }
