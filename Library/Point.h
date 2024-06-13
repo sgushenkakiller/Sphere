@@ -16,11 +16,11 @@ struct Point {
         return is;
     }
     bool operator==(const Point &other) {
-        if (this->x == other.x && this->y == other.y && this->z == other.z) return 1;
-        return 0;
+        if (this->x == other.x && this->y == other.y && this->z == other.z) return True;
+        return False;
     }
     bool operator!=(const Point &other) {
-        if (this->x != other.x || this->y != other.y || this->z != other.z) return 1;
-        return 0;
+        if (this->x != other.x || this->y != other.y || this->z != other.z) return True;
+        return False;
     }
 };
