@@ -12,13 +12,9 @@ int main() {
     double radius = 0;
     std::cin >> radius;
     Sphere sph(pt, 3);
-    std::cout << "Ñôåðà: ";
     std::cout << sph << std::endl;
-    std::cout << "Ââåäèòå êîîðäèíàòû öåíòðà è ðàäèóñ ñôåðû: ";
     std::cin >> sph;
-    std::cout << "Îáú¸ì: ";
     std::cout << sph.getVolume() << std::endl;
-    std::cout << "Ïëîùàäü ïîâåðõíîñòè: ";
     std::cout << sph.getSurfaceArea() << std::endl;
     return 0;
 }
