@@ -10,28 +10,17 @@ Sphere::Sphere(const Point center, const double radius) {
     this->radius = radius;
 }
 
-/**
-* @brief Считает объем сферы
-* @param radius - радиус сферы
-* @return Возвращает радиус сферы
-*/
+
 double Sphere::getVolume() {
     return (4.0/3.0) * M_PI * radius * radius * radius;
 }
 
-/**
-* @brief Считает площадь поверхности сферы
-* @param radius - радиус сферы
-* @return Возвращает площадь поверхности сферы
-*/
+
 double Sphere::getSurfaceArea() {
     return 4 * M_PI * radius * radius;
 }
 
-/**
-* @brief Переводит данные в строковый формат
-* @return Возвращает данные в строковом формате
-*/
+
 std::string Sphere::toString() const {
     std::stringstream ss;
     ss << "center: " << this->center << "radius: " << (int)this->radius << std::endl;
