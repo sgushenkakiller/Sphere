@@ -20,7 +20,6 @@ struct Point {
         return False;
     }
     bool operator!=(const Point &other) {
-        if (this->x != other.x || this->y != other.y || this->z != other.z) return True;
-        return False;
+        if (this->x != other.x || this->y != other.y || this->z != other.z) return !(*this == other);; 
     }
 };
